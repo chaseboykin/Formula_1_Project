@@ -17,13 +17,11 @@ GROUP BY constructors.name, constructorstandings.wins
 ORDER BY constructorstandings.wins DESC
 LIMIT 10;
 
-**Mercedes has been the best team since 2000**
-
 Results:
 
 <img width="251" alt="Screen Shot 2023-10-01 at 9 03 38 PM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/3361ea79-646f-4efc-8ade-e96d12e62661">
 
-
+**Mercedes has been the best team since 2000**
 
 2. How many drivers born in or after 1998 have won a race?
 
