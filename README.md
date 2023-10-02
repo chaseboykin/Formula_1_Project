@@ -15,7 +15,7 @@ JOIN constructorstandings
 ON constructors.constructorid = constructorstandings.constructorid
 JOIN races
 ON constructorstandings.raceid = races.raceid
-WHERE races.year >= 2020
+WHERE races.year = 2022
 GROUP by constructors.name, constructors.nationality;`
 
 Result:
@@ -39,7 +39,8 @@ LIMIT 10;`
 
 Result:
 
-<img width="170" alt="Screen Shot 2023-10-02 at 3 43 46 PM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/a89709d9-f1e5-4f53-ac20-d2066c659d48">
+<img width="290" alt="Screen Shot 2023-10-02 at 4 56 36 PM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/819fab11-abc8-41c5-8d1e-95b4d32259f8">
+
 
 **Ferrari is the best team of all time**
 
@@ -52,14 +53,15 @@ JOIN constructorstandings
 ON constructors.constructorid = constructorstandings.constructorid
 JOIN races
 ON constructorstandings.raceid = races.raceid
-WHERE year > 2012
+WHERE year >= 2012
 GROUP BY constructors.name
 ORDER BY SUM(constructorstandings.points) DESC
 LIMIT 10;`
 
 Result:
 
-<img width="168" alt="Screen Shot 2023-10-02 at 4 10 39 PM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/64819ed5-05d7-4438-b468-ace0193dbee4">
+<img width="302" alt="Screen Shot 2023-10-02 at 4 58 13 PM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/da6d6e0b-7f8b-444d-ab1d-fabf51126486">
+
 
 **Mercedes is the best team in the last 10 years**
 
@@ -74,7 +76,7 @@ JOIN driverstandings
 ON drivers.driverid = driverstandings.driverid
 JOIN races
 ON driverstandings.raceid = races.raceid
-WHERE year > 2022
+WHERE year = 2022
 GROUP BY forename, surname, nationality, dob
 ORDER BY dob;`
 
@@ -101,12 +103,32 @@ LIMIT 10;`
 
 Result:
 
-<img width="294" alt="Screen Shot 2023-10-02 at 3 27 55 PM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/54cc249f-7540-4002-8cda-72c18cfe53bc">
+<img width="506" alt="Screen Shot 2023-10-02 at 5 00 28 PM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/e07216fb-fb11-4559-838a-a835f5e7c6e9">
+
 
 **Lewis Hamilton is the best Formula 1 driver of all time**
 
 
 6. Who are the best 10 drivers in the last 10 years?
+
+`SELECT forename, surname, nationality, dob
+FROM driverstandings
+JOIN drivers
+ON driverstandings.driverid = drivers.driverid
+JOIN results
+ON drivers.driverid = results.driverid
+JOIN races
+ON results.raceid = races.raceid
+WHERE year >= 2012
+GROUP BY forename, surname, nationality, dob
+ORDER BY SUM(results.points) DESC
+LIMIT 10;`
+
+Result:
+
+<img width="502" alt="Screen Shot 2023-10-02 at 5 02 37 PM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/6b19e7d7-c15c-403a-b34e-b517ff05cc73">
+
+**Lewis Hamilton is the best driver in the last 10 years**
 
 
 Lastly, let's look at insights into the drivers and races:
