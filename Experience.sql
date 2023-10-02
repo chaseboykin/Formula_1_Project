@@ -11,13 +11,13 @@ GROUP BY constructors.name, constructorstandings.wins
 ORDER BY constructorstandings.wins DESC
 LIMIT 10;
 
---—How many drivers born after 2000 have won a race?
-Experience (Join):
-SELECT *
+--How many drivers born in or after 1998 have won a race?
+SELECT forename, surname
 FROM drivers
 JOIN driverstandings
 ON drivers.driverid = driverstandings.driverid
-WHERE dob > '2000-01-01' AND wins >= 1;
+WHERE dob > '1998-01-01' AND wins >= 1
+GROUP BY forename, surname;
 
 --How often do drivers win the race when they qualify in 1st place?
 
