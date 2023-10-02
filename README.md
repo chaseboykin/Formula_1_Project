@@ -1,4 +1,4 @@
-Formula 1 Project<h1>
+<h1>Formula 1 Project<h1>
 
 A SQL and Tableau project based on Ergast's [Formula 1 Dataset](https://ergast.com/mrd/db/)<h3>
 
