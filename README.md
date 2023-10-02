@@ -18,9 +18,11 @@ ORDER BY constructorstandings.wins DESC
 LIMIT 10;
 
 Results:
+
 <img width="251" alt="Screen Shot 2023-10-01 at 9 03 38 PM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/3361ea79-646f-4efc-8ade-e96d12e62661">
 
 2. How many drivers born in or after 1998 have won a race?
+
 SELECT forename, surname
 FROM drivers
 JOIN driverstandings
@@ -29,4 +31,5 @@ WHERE dob > '1998-01-01' AND wins >= 1
 GROUP BY forename, surname;
 
 Results:
+
 <img width="297" alt="Screen Shot 2023-10-01 at 9 07 39 PM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/bcb07425-2930-486f-a5cf-db5d97261495">
