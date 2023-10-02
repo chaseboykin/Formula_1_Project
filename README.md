@@ -17,7 +17,7 @@ Results:
 
 <img width="296" alt="Screen Shot 2023-10-02 at 9 03 38 AM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/c4f2a16b-00f2-4559-8663-c1f180769876">
 
-**The majority are British teams with 3 and then Italian with 2**
+**The majority of teams are British with 3 and then Italian with 2**
 
 
 2. Who has been the most dominant team since 2000?
@@ -42,20 +42,22 @@ Results:
 
 3. Who has driven in Formula 1 since 2000?
 
-`SELECT forename, surname, dob
+`SELECT forename, surname, nationality, dob
 FROM drivers
 JOIN driverstandings
 ON drivers.driverid = driverstandings.driverid
 JOIN races
 ON driverstandings.raceid = races.raceid
-WHERE year >= 2020
-GROUP BY forename, surname, dob
+WHERE year > 2020
+GROUP BY forename, surname, nationality, dob
 ORDER BY dob;`
 
 Results:
 
-<img width="378" alt="Screen Shot 2023-10-02 at 9 20 47 AM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/0139c7de-7a4f-4de8-9055-b4c5b066fe7f">
-<img width="379" alt="Screen Shot 2023-10-02 at 9 21 06 AM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/22864e9a-b2d5-4c27-83ac-b43e7ec9ed43">
+<img width="506" alt="Screen Shot 2023-10-02 at 9 26 32 AM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/00ac0acb-cb30-4fd1-b203-a049ca514791">
+<img width="505" alt="Screen Shot 2023-10-02 at 9 26 48 AM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/a4074d02-dc87-4db8-ae56-aa1f9e0a5b8e">
+
+**The majority of drivers are British and German with 3 drivers each**
 
 
 4. How many drivers born in or after 1998 have won a race?
