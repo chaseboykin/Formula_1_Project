@@ -40,7 +40,7 @@ Results:
 **Mercedes has been the best team since 2000**
 
 
-3. Who has driven in Formula 1 since 2000?
+3. Who has driven in Formula 1 since 2020?
 
 `SELECT forename, surname, nationality, dob
 FROM drivers
@@ -57,7 +57,7 @@ Results:
 <img width="506" alt="Screen Shot 2023-10-02 at 9 26 32 AM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/00ac0acb-cb30-4fd1-b203-a049ca514791">
 <img width="505" alt="Screen Shot 2023-10-02 at 9 26 48 AM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/a4074d02-dc87-4db8-ae56-aa1f9e0a5b8e">
 
-**The majority of drivers are British and German with 3 drivers each**
+**The majority of drivers now are British and German with 3 drivers each**
 
 
 4. How many drivers born in or after 1998 have won a race?
@@ -76,7 +76,26 @@ Results:
 **Experience matters in Formula 1**
 
 
-5. How often do drivers win the race when they qualify in 1st place?
+5. Who are the best 10 drivers of all time?
+
+`SELECT forename, surname
+FROM driverstandings
+JOIN drivers
+ON driverstandings.driverid = drivers.driverid
+JOIN results
+ON drivers.driverid = results.driverid
+GROUP BY forename, surname
+ORDER BY SUM(results.points) DESC
+LIMIT 10;`
+
+Results:
+
+<img width="294" alt="Screen Shot 2023-10-02 at 3 27 55 PM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/54cc249f-7540-4002-8cda-72c18cfe53bc">
+
+**Lewis Hamilton is the best Formula 1 driver of all time**
+
+
+6. How often do drivers win the race when they qualify in 1st place?
 
 `WITH 
 X1 AS (SELECT COUNT(ds.wins) AS wins FROM driverstandings AS ds
