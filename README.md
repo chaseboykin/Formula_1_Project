@@ -20,24 +20,23 @@ Results:
 **The majority of teams are British with 3 and then Italian with 2**
 
 
-2. Who has been the most dominant team since 2000?
+2. Who are the most dominant teams of all time?
 
-`SELECT constructors.name, constructorstandings.wins
+`SELECT constructors.name
 FROM constructors
 JOIN constructorstandings
 ON constructors.constructorid = constructorstandings.constructorid
 JOIN races
 ON constructorstandings.raceid = races.raceid
-WHERE date > '2000-01-01'
-GROUP BY constructors.name, constructorstandings.wins
-ORDER BY constructorstandings.wins DESC
+GROUP BY constructors.name
+ORDER BY SUM(constructorstandings.points) DESC
 LIMIT 10;`
 
 Results:
 
-<img width="251" alt="Screen Shot 2023-10-01 at 9 03 38 PM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/3361ea79-646f-4efc-8ade-e96d12e62661">
+<img width="170" alt="Screen Shot 2023-10-02 at 3 43 46 PM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/a89709d9-f1e5-4f53-ac20-d2066c659d48">
 
-**Mercedes has been the best team since 2000**
+**Ferrari is the best team of all time**
 
 
 3. Who has driven in Formula 1 since 2020?
