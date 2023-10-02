@@ -10,7 +10,7 @@ JOIN constructorstandings
 ON constructors.constructorid = constructorstandings.constructorid
 JOIN races
 ON constructorstandings.raceid = races.raceid
-WHERE races.year > 2020
+WHERE races.year >= 2020
 GROUP by constructors.name, constructors.nationality;`
 
 Results:
@@ -18,6 +18,7 @@ Results:
 <img width="296" alt="Screen Shot 2023-10-02 at 9 03 38 AM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/c4f2a16b-00f2-4559-8663-c1f180769876">
 
 **The majority are British teams with 3 and then Italian with 2**
+
 
 2. Who has been the most dominant team since 2000?
 
@@ -38,7 +39,26 @@ Results:
 
 **Mercedes has been the best team since 2000**
 
-3. How many drivers born in or after 1998 have won a race?
+
+3. Who has driven in Formula 1 since 2000?
+
+`SELECT forename, surname, dob
+FROM drivers
+JOIN driverstandings
+ON drivers.driverid = driverstandings.driverid
+JOIN races
+ON driverstandings.raceid = races.raceid
+WHERE year >= 2020
+GROUP BY forename, surname, dob
+ORDER BY dob;`
+
+Results:
+
+<img width="378" alt="Screen Shot 2023-10-02 at 9 20 47 AM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/0139c7de-7a4f-4de8-9055-b4c5b066fe7f">
+<img width="379" alt="Screen Shot 2023-10-02 at 9 21 06 AM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/22864e9a-b2d5-4c27-83ac-b43e7ec9ed43">
+
+
+4. How many drivers born in or after 1998 have won a race?
 
 `SELECT forename, surname
 FROM drivers
@@ -53,7 +73,8 @@ Results:
 
 **Experience matters in Formula 1**
 
-4. How often do drivers win the race when they qualify in 1st place?
+
+5. How often do drivers win the race when they qualify in 1st place?
 
 `WITH 
 X1 AS (SELECT COUNT(ds.wins) AS wins FROM driverstandings AS ds
@@ -68,3 +89,4 @@ Results:
 <img width="189" alt="Screen Shot 2023-10-01 at 9 19 16 PM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/3ca94369-d225-4ac9-98df-0e43292ee4f0">
 
 **Drivers who qualify in 1st place win the race ~62% of the time**
+
