@@ -49,6 +49,7 @@ SELECT (CAST(X1.wins AS FLOAT) / CAST(X2.races AS FLOAT)) * 100 AS Pct_Wins_Star
 FROM X1, X2;
 
 Results:
+
 <img width="189" alt="Screen Shot 2023-10-01 at 9 19 16 PM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/3ca94369-d225-4ac9-98df-0e43292ee4f0">
 
 **Drivers who qualify in 1st place win the race ~62% of the time**
