@@ -1,6 +1,11 @@
 A SQL and Tableau project based on Ergast's [Formula 1 Dataset](https://ergast.com/mrd/db/)
 
+This Formula 1 Dataset captures every team, driver, race, and outcome from the first race ever in 1950 through the end of the 2022 season. Many teams and drivers have come and gone in the 72 years since Formula 1 was created. There are a lot of teams in this dataset because new investors come into the sport and change the name of the team, which resets the team's points and wins. Therefore, I want to look at the all-time leaders in the sport, as well as the leaders in the past 10 years.
+
+Here is strictly the code of each answer:
 [SQL Code](https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/blob/main/Experience.sql)
+
+Firstly, I want to look at Formula 1 teams:
 
 1. Who are the 10 teams currently in Formula 1?
 
@@ -13,11 +18,11 @@ ON constructorstandings.raceid = races.raceid
 WHERE races.year >= 2020
 GROUP by constructors.name, constructors.nationality;`
 
-Results:
+Result:<h2>
 
 <img width="296" alt="Screen Shot 2023-10-02 at 9 03 38 AM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/c4f2a16b-00f2-4559-8663-c1f180769876">
 
-**The majority of teams are British with 3 and then Italian with 2**
+**<h1>The majority of teams are British with 3 and then Italian with 2**
 
 
 2. Who are the most dominant teams of all time?
@@ -32,14 +37,36 @@ GROUP BY constructors.name
 ORDER BY SUM(constructorstandings.points) DESC
 LIMIT 10;`
 
-Results:
+Result:
 
 <img width="170" alt="Screen Shot 2023-10-02 at 3 43 46 PM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/a89709d9-f1e5-4f53-ac20-d2066c659d48">
 
 **Ferrari is the best team of all time**
 
 
-3. Who has driven in Formula 1 since 2020?
+3. Who are the most dominant teams in the last 10 years?
+
+`SELECT constructors.name
+FROM constructors
+JOIN constructorstandings
+ON constructors.constructorid = constructorstandings.constructorid
+JOIN races
+ON constructorstandings.raceid = races.raceid
+WHERE year > 2012
+GROUP BY constructors.name
+ORDER BY SUM(constructorstandings.points) DESC
+LIMIT 10;`
+
+Result:
+
+<img width="168" alt="Screen Shot 2023-10-02 at 4 10 39 PM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/64819ed5-05d7-4438-b468-ace0193dbee4">
+
+**Mercedes is the best team in the last 10 years**
+
+
+Now let's look into the drivers:
+
+4. Who has driven in Formula 1 since 2022?
 
 `SELECT forename, surname, nationality, dob
 FROM drivers
@@ -47,32 +74,17 @@ JOIN driverstandings
 ON drivers.driverid = driverstandings.driverid
 JOIN races
 ON driverstandings.raceid = races.raceid
-WHERE year > 2020
+WHERE year > 2022
 GROUP BY forename, surname, nationality, dob
 ORDER BY dob;`
 
-Results:
+Result:
 
-<img width="506" alt="Screen Shot 2023-10-02 at 9 26 32 AM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/00ac0acb-cb30-4fd1-b203-a049ca514791">
-<img width="505" alt="Screen Shot 2023-10-02 at 9 26 48 AM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/a4074d02-dc87-4db8-ae56-aa1f9e0a5b8e">
-
-**The majority of drivers now are British and German with 3 drivers each**
+<img width="509" alt="Screen Shot 2023-10-02 at 4 43 01 PM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/9d80450f-1550-4a9d-948c-d4594d324168">
+<img width="506" alt="Screen Shot 2023-10-02 at 4 43 21 PM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/09146d71-6a69-41f5-a235-1b04a7f60d70">
 
 
-4. How many drivers born in or after 1998 have won a race?
-
-`SELECT forename, surname
-FROM drivers
-JOIN driverstandings
-ON drivers.driverid = driverstandings.driverid
-WHERE dob > '1998-01-01' AND wins >= 1
-GROUP BY forename, surname;`
-
-Results:
-
-<img width="297" alt="Screen Shot 2023-10-01 at 9 07 39 PM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/bcb07425-2930-486f-a5cf-db5d97261495">
-
-**Experience matters in Formula 1**
+**The majority of drivers now are British 3 drivers**
 
 
 5. Who are the best 10 drivers of all time?
@@ -87,14 +99,35 @@ GROUP BY forename, surname
 ORDER BY SUM(results.points) DESC
 LIMIT 10;`
 
-Results:
+Result:
 
 <img width="294" alt="Screen Shot 2023-10-02 at 3 27 55 PM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/54cc249f-7540-4002-8cda-72c18cfe53bc">
 
 **Lewis Hamilton is the best Formula 1 driver of all time**
 
 
-6. How often do drivers win the race when they qualify in 1st place?
+6. Who are the best 10 drivers in the last 10 years?
+
+
+Lastly, let's look at insights into the drivers and races:
+
+7. How many drivers born in or after 1998 have won a race?
+
+`SELECT forename, surname
+FROM drivers
+JOIN driverstandings
+ON drivers.driverid = driverstandings.driverid
+WHERE dob > '1998-01-01' AND wins >= 1
+GROUP BY forename, surname;`
+
+Result:
+
+<img width="297" alt="Screen Shot 2023-10-01 at 9 07 39 PM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/bcb07425-2930-486f-a5cf-db5d97261495">
+
+**Experience matters in Formula 1**
+
+
+8. How often do drivers win the race when they qualify in 1st place?
 
 `WITH 
 X1 AS (SELECT COUNT(ds.wins) AS wins FROM driverstandings AS ds
@@ -104,7 +137,7 @@ X2 AS (SELECT COUNT(resultid) AS races FROM results)
 SELECT (CAST(X1.wins AS FLOAT) / CAST(X2.races AS FLOAT)) * 100 AS Pct_Wins_Starting_1st
 FROM X1, X2;`
 
-Results:
+Result:
 
 <img width="189" alt="Screen Shot 2023-10-01 at 9 19 16 PM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/3ca94369-d225-4ac9-98df-0e43292ee4f0">
 
