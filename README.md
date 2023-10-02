@@ -2,7 +2,24 @@ A SQL and Tableau project based on Ergast's [Formula 1 Dataset](https://ergast.c
 
 [SQL Code](https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/blob/main/Experience.sql)
 
-1. Who has been the most dominant team since 2000?
+1. Who are the 10 teams currently in Formula 1?
+
+SELECT constructors.name, constructors.nationality
+FROM constructors
+JOIN constructorstandings
+ON constructors.constructorid = constructorstandings.constructorid
+JOIN races
+ON constructorstandings.raceid = races.raceid
+WHERE races.year > 2020
+GROUP by constructors.name, constructors.nationality;
+
+Results:
+
+<img width="296" alt="Screen Shot 2023-10-02 at 9 03 38 AM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/c4f2a16b-00f2-4559-8663-c1f180769876">
+
+**The majority are British teams with 3 and then Italian with 2**
+
+2. Who has been the most dominant team since 2000?
 
 SELECT constructors.name, constructorstandings.wins
 FROM constructors
@@ -21,7 +38,7 @@ Results:
 
 **Mercedes has been the best team since 2000**
 
-2. How many drivers born in or after 1998 have won a race?
+3. How many drivers born in or after 1998 have won a race?
 
 SELECT forename, surname
 FROM drivers
@@ -36,7 +53,7 @@ Results:
 
 **Experience matters in Formula 1**
 
-3. How often do drivers win the race when they qualify in 1st place?
+4. How often do drivers win the race when they qualify in 1st place?
 
 WITH 
 X1 AS (SELECT COUNT(ds.wins) AS wins FROM driverstandings AS ds
