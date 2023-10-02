@@ -1,14 +1,15 @@
-Formula 1 Project_
+Formula 1 Project  
+
 
 A SQL and Tableau project based on Ergast's [Formula 1 Dataset](https://ergast.com/mrd/db/)
 
-<h5>This Formula 1 Dataset captures every team, driver, race, and outcome from the first race ever in 1950 through the end of the 2022 season. Many teams and drivers have come and gone in the 72 years since Formula 1 was created. There are a lot of teams in this dataset because new investors come into the sport and change the name of the team, which resets the team's points and wins. Therefore, I want to look at the all-time leaders in the sport, as well as the leaders in the past 10 years. <h4>
+This Formula 1 Dataset captures every team, driver, race, and outcome from the first race ever in 1950 through the end of the 2022 season. Many teams and drivers have come and gone in the 72 years since Formula 1 was created. There are a lot of teams in this dataset because new investors come into the sport and change the name of the team, which resets the team's points and wins. Therefore, I want to look at the all-time leaders in the sport, as well as the leaders in the past 10 years. <h4>
 
 Here is strictly the code of each answer: [SQL Code](https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/blob/main/Experience.sql)
 
-<h4>Firstly, I want to look at Formula 1 teams:
+Firstly, I want to look at Formula 1 teams:
 
-<h5>1. Who are the 10 teams currently in Formula 1?
+1. Who are the 10 teams currently in Formula 1?
 
 `SELECT constructors.name, constructors.nationality
 FROM constructors
