@@ -1,4 +1,4 @@
-Formula 1 Project:-
+Formula 1 Project<br>
 
 
 A SQL and Tableau project based on Ergast's [Formula 1 Dataset](https://ergast.com/mrd/db/)
