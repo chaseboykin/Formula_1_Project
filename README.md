@@ -6,7 +6,7 @@
 
 #### This Formula 1 Dataset captures every team, driver, race, and outcome from the first race ever in 1950 through the end of the 2022 season. Many teams and drivers have come and gone in the 72 years since Formula 1 was created. There are a lot of teams in this dataset because new investors come into the sport and change the name of the team, which resets the team's points and wins. Therefore, I want to look at the all-time leaders in the sport, as well as the leaders in the past 10 years.  
 ##
-Firstly, I want to look at Formula 1 teams:
+#### Firstly, I want to look at Formula 1 teams:
 
 1. Who are the 10 teams currently in Formula 1?
 
@@ -23,7 +23,7 @@ Result:
 
 <img width="296" alt="Screen Shot 2023-10-02 at 9 03 38 AM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/c4f2a16b-00f2-4559-8663-c1f180769876">
 
-**The majority of teams are British with 3**
+### **The majority of teams are British with 3**
 
 
 2. Who are the most dominant teams of all time?
@@ -43,7 +43,7 @@ Result:
 <img width="290" alt="Screen Shot 2023-10-02 at 4 56 36 PM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/819fab11-abc8-41c5-8d1e-95b4d32259f8">
 
 
-**Ferrari is the best team of all time**
+### **Ferrari is the best team of all time**
 
 
 3. Who are the most dominant teams in the last 10 years?
@@ -67,7 +67,7 @@ Result:
 **Mercedes is the best team in the last 10 years**
 
 
-Now let's look into the drivers:
+#### Now let's look into the drivers:
 
 4. Who has driven in Formula 1 since 2022?
 
@@ -132,7 +132,7 @@ Result:
 **Lewis Hamilton is the best driver in the last 10 years**
 
 
-Lastly, let's look at insights into the drivers and races:
+#### Lastly, let's look at insights into the drivers and races:
 
 7. How many drivers born in or after 1998 have won a race?
 
