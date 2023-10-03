@@ -11,20 +11,20 @@ Firstly, I want to look at Formula 1 teams:
 
 1. Who are the 10 teams currently in Formula 1?
 
-SELECT constructors.name, constructors.nationality
+`SELECT constructors.name, constructors.nationality
 FROM constructors
 JOIN constructorstandings
 ON constructors.constructorid = constructorstandings.constructorid
 JOIN races
 ON constructorstandings.raceid = races.raceid
 WHERE races.year = 2022
-GROUP by constructors.name, constructors.nationality;
+GROUP by constructors.name, constructors.nationality;`
 
 Result:
 
 <img width="296" alt="Screen Shot 2023-10-02 at 9 03 38 AM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/c4f2a16b-00f2-4559-8663-c1f180769876">
 
-**The majority of teams are British with 3 and then Italian with 2**
+**The majority of teams are British with 3**
 
 
 2. Who are the most dominant teams of all time?
