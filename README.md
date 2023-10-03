@@ -131,10 +131,9 @@ Result:
 <img width="502" alt="Screen Shot 2023-10-02 at 5 02 37 PM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/6b19e7d7-c15c-403a-b34e-b517ff05cc73">
 
 #### **Lewis Hamilton is the best driver in the last 10 years**
-
+<br>
 ##
 #### Lastly, let's look at insights into the drivers and races:  
-<br>
 
 7. How many drivers born in or after 1998 have won a race?
 
