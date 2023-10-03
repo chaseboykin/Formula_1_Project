@@ -7,7 +7,7 @@
 #### This Formula 1 Dataset captures every team, driver, race, and outcome from the first race ever in 1950 through the end of the 2022 season. Many teams and drivers have come and gone in the 72 years since Formula 1 was created. There are a lot of teams in this dataset because new investors come into the sport and change the name of the team, which resets the team's points and wins. Therefore, I want to look at the all-time leaders in the sport, as well as the leaders in the past 10 years.  
 ##
 #### Firstly, I want to look at Formula 1 teams:  
-##
+
 1. Who are the 10 teams currently in Formula 1?
 
 `SELECT constructors.name, constructors.nationality
@@ -25,8 +25,7 @@ Result:
 
 
 #### **The majority of teams are British with 3**
-
-
+<br>
 
 2. Who are the most dominant teams of all time?
 
@@ -89,7 +88,7 @@ Result:
 <img width="506" alt="Screen Shot 2023-10-02 at 4 43 21 PM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/09146d71-6a69-41f5-a235-1b04a7f60d70">
 
 
-#### **The majority of drivers now are British 3 drivers**
+#### **The majority of drivers now are British with 3 drivers**
 
 
 5. Who are the best 10 drivers of all time?
