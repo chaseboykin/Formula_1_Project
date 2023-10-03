@@ -65,10 +65,11 @@ Result:
 <img width="302" alt="Screen Shot 2023-10-02 at 4 58 13 PM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/da6d6e0b-7f8b-444d-ab1d-fabf51126486">
 
 
-#### **Mercedes is the best team in the last 10 years**  
-<br>  
+#### **Mercedes is the best team in the last 10 years**
+<br>
+
 ##
-#### Now let's look into the drivers:  
+#### Now let's look into the drivers:
 
 4. Who has driven in Formula 1 since 2022?
 
