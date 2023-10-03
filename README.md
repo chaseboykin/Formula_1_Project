@@ -66,7 +66,7 @@ Result:
 
 
 #### **Mercedes is the best team in the last 10 years**  
-<br>
+<br>  
 ##
 #### Now let's look into the drivers:  
 
@@ -150,7 +150,7 @@ Result:
 <img width="297" alt="Screen Shot 2023-10-01 at 9 07 39 PM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/bcb07425-2930-486f-a5cf-db5d97261495">
 
 **Experience matters in Formula 1**
-
+<br>
 
 8. How often do drivers win the race when they qualify in 1st place?
 
