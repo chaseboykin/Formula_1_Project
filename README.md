@@ -18,7 +18,7 @@ ON constructors.constructorid = constructorstandings.constructorid
 JOIN races
 ON constructorstandings.raceid = races.raceid
 WHERE races.year = 2022
-GROUP by constructors.name, constructors.nationality;
+GROUP by constructors.name, constructors.nationality;<code>
 
 Result:
 
