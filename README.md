@@ -1,4 +1,4 @@
-Formula 1 Project<br>
+Formula 1 Project<br />
 
 
 A SQL and Tableau project based on Ergast's [Formula 1 Dataset](https://ergast.com/mrd/db/)
@@ -11,14 +11,14 @@ Firstly, I want to look at Formula 1 teams:
 
 1. Who are the 10 teams currently in Formula 1?
 
-<code>SELECT constructors.name, constructors.nationality
+SELECT constructors.name, constructors.nationality
 FROM constructors
 JOIN constructorstandings
 ON constructors.constructorid = constructorstandings.constructorid
 JOIN races
 ON constructorstandings.raceid = races.raceid
 WHERE races.year = 2022
-GROUP by constructors.name, constructors.nationality;<code>
+GROUP by constructors.name, constructors.nationality;
 
 Result:
 
