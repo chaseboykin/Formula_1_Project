@@ -45,7 +45,7 @@ Result:
 
 
 #### **Ferrari is the best team of all time**
-
+<br>
 
 3. Who are the most dominant teams in the last 10 years?
 
@@ -65,11 +65,11 @@ Result:
 <img width="302" alt="Screen Shot 2023-10-02 at 4 58 13 PM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/da6d6e0b-7f8b-444d-ab1d-fabf51126486">
 
 
-#### **Mercedes is the best team in the last 10 years**
-
-
-#### Now let's look into the drivers:  
+#### **Mercedes is the best team in the last 10 years**  
+<br>
 ##
+#### Now let's look into the drivers:  
+
 4. Who has driven in Formula 1 since 2022?
 
 `SELECT forename, surname, nationality, dob
@@ -89,7 +89,7 @@ Result:
 
 
 #### **The majority of drivers now are British with 3 drivers**
-
+<br>
 
 5. Who are the best 10 drivers of all time?
 
@@ -109,7 +109,7 @@ Result:
 
 
 #### **Lewis Hamilton is the best Formula 1 driver of all time**
-
+<br>
 
 6. Who are the best 10 drivers in the last 10 years?
 
@@ -132,9 +132,10 @@ Result:
 
 #### **Lewis Hamilton is the best driver in the last 10 years**
 
-
-#### Lastly, let's look at insights into the drivers and races:  
 ##
+#### Lastly, let's look at insights into the drivers and races:  
+<br>
+
 7. How many drivers born in or after 1998 have won a race?
 
 `SELECT forename, surname
