@@ -1,6 +1,6 @@
 # Formula 1 Project  
-#
-A SQL and Tableau project based on Ergast's [Formula 1 Dataset](https://ergast.com/mrd/db/)  
+
+###### A SQL and Tableau project based on Ergast's [Formula 1 Dataset](https://ergast.com/mrd/db/)  
 
 Here is strictly the code of each result: [SQL Code](https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/blob/main/Experience.sql)
 
