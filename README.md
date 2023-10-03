@@ -66,9 +66,9 @@ Result:
 
 
 #### **Mercedes is the best team in the last 10 years**  
-<br>  
+
 ##  
-#### Now let's look into the drivers:  
+#### Now let's look into the drivers:
 
 4. Who has driven in Formula 1 since 2022?
 
