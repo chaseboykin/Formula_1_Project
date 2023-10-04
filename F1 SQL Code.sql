@@ -57,3 +57,18 @@ ON drivers.driverid = results.driverid
 GROUP BY forename, surname
 ORDER BY SUM(results.points) DESC
 LIMIT 10;
+
+--Who are the best 10 drivers in the last 10 years?
+
+SELECT forename, surname, nationality, dob
+FROM driverstandings
+JOIN drivers
+ON driverstandings.driverid = drivers.driverid
+JOIN results
+ON drivers.driverid = results.driverid
+JOIN races
+ON results.raceid = races.raceid
+WHERE year >= 2012
+GROUP BY forename, surname, nationality, dob
+ORDER BY SUM(results.points) DESC
+LIMIT 10;
