@@ -33,3 +33,15 @@ WHERE year >= 2012
 GROUP BY constructors.name
 ORDER BY SUM(constructorstandings.points) DESC
 LIMIT 10;
+
+--Who has driven in Formula 1 since 2022?
+
+SELECT forename, surname, nationality, dob
+FROM drivers
+JOIN driverstandings
+ON drivers.driverid = driverstandings.driverid
+JOIN races
+ON driverstandings.raceid = races.raceid
+WHERE year = 2022
+GROUP BY forename, surname, nationality, dob
+ORDER BY dob;
