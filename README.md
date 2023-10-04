@@ -24,7 +24,6 @@ Result:
 <img width="296" alt="Screen Shot 2023-10-02 at 9 03 38 AM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/c4f2a16b-00f2-4559-8663-c1f180769876">
 
 
-#### **The majority of teams are British with 3**
 <br>
 
 2. Who are the most dominant teams of all time?
@@ -88,7 +87,6 @@ Result:
 <img width="506" alt="Screen Shot 2023-10-02 at 4 43 21 PM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/09146d71-6a69-41f5-a235-1b04a7f60d70">
 
 
-#### **The majority of drivers now are British with 3 drivers**
 <br>
 
 5. Who are the best 10 drivers of all time?
