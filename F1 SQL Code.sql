@@ -72,3 +72,12 @@ WHERE year >= 2012
 GROUP BY forename, surname, nationality, dob
 ORDER BY SUM(results.points) DESC
 LIMIT 10;
+
+--How many drivers born in or after 1998 have won a race?
+
+SELECT forename, surname
+FROM drivers
+JOIN driverstandings
+ON drivers.driverid = driverstandings.driverid
+WHERE dob > '1998-01-01' AND wins >= 1
+GROUP BY forename, surname;
