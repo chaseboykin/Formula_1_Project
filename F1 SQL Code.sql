@@ -20,3 +20,16 @@ ON constructorstandings.raceid = races.raceid
 GROUP BY constructors.name
 ORDER BY SUM(constructorstandings.points) DESC
 LIMIT 10;
+
+--Who are the most dominant teams in the last 10 years?
+
+SELECT constructors.name
+FROM constructors
+JOIN constructorstandings
+ON constructors.constructorid = constructorstandings.constructorid
+JOIN races
+ON constructorstandings.raceid = races.raceid
+WHERE year >= 2012
+GROUP BY constructors.name
+ORDER BY SUM(constructorstandings.points) DESC
+LIMIT 10;
