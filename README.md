@@ -30,6 +30,7 @@ Result:
 2. Who are the most dominant teams of all time?
 
 `SELECT constructors.name
+
 FROM constructors
 JOIN constructorstandings
 ON constructors.constructorid = constructorstandings.constructorid
