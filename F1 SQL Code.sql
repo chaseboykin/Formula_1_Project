@@ -1,3 +1,16 @@
+--Who are the 10 teams currently in Formula 1?
+
+SELECT constructors.name, constructors.nationality
+FROM constructors
+JOIN constructorstandings
+ON constructors.constructorid = constructorstandings.constructorid
+JOIN races
+ON constructorstandings.raceid = races.raceid
+WHERE races.year = 2022
+GROUP by constructors.name, constructors.nationality;
+
+
+
 --Who has been the most dominant team since 2000?
 
 SELECT constructors.name, constructorstandings.wins
