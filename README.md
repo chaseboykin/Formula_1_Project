@@ -22,7 +22,7 @@ GROUP by constructors.name, constructors.nationality;`
 Result:
 
 <img width="296" alt="Screen Shot 2023-10-02 at 9 03 38 AM" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/c4f2a16b-00f2-4559-8663-c1f180769876">
-
+<br>
 
 <br>
 
