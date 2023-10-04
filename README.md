@@ -4,6 +4,8 @@
 
 #### Here is strictly the code of each result: [SQL Code](https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/blob/main/Experience.sql)
 
+#### Here is the dashboard created based on the results: [Dashboard](https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/blob/main/F1%20Dashboard%20(Tableau).md)
+
 #### This Formula 1 Dataset captures every team, driver, race, and outcome from the first race ever in 1950 through the end of the 2022 season. Many teams and drivers have come and gone in the 72 years since Formula 1 was created. There are a lot of teams in this dataset because new investors come into the sport and change the name of the team, which resets the team's points and wins. Therefore, I want to look at the all-time leaders in the sport, as well as the leaders in the past 10 years.  
 ##
 #### Firstly, I want to look at Formula 1 teams:  
