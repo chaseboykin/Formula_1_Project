@@ -45,3 +45,15 @@ ON driverstandings.raceid = races.raceid
 WHERE year = 2022
 GROUP BY forename, surname, nationality, dob
 ORDER BY dob;
+
+--Who are the best 10 drivers of all time?
+
+SELECT forename, surname
+FROM driverstandings
+JOIN drivers
+ON driverstandings.driverid = drivers.driverid
+JOIN results
+ON drivers.driverid = results.driverid
+GROUP BY forename, surname
+ORDER BY SUM(results.points) DESC
+LIMIT 10;
