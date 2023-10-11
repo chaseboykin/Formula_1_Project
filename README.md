@@ -8,9 +8,24 @@
 
 #### Here is strictly the code of each result: [SQL Code](https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/blob/main/Experience.sql)
 
-#### Here is the dashboard created based on the results: [Dashboard](https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/blob/main/F1%20Dashboard%20(Tableau).md)
+#### Here is the dashboard created based on the results: [Dashboard](https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/blob/main/F1%20Dashboard%20(Tableau).md)  
 
-##
+## Datasets Used
+I used 8 different tables from the dataset:
+* circuits
+* constructors
+* constructorStandings
+* drivers
+* driverStandings
+* qualifying
+* races
+* results
+
+## Entity Relationship Diagram  
+<img width="999" alt="ERD" src="https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/assets/140556718/adbff2e0-ff69-45ac-a2cc-9e0af9651e2d">
+
+
+
 #### Firstly, I want to look at Formula 1 teams:  
 
 1. Who are the 10 teams currently in Formula 1?
