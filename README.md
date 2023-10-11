@@ -10,7 +10,7 @@
 
 #### Here is the dashboard created based on the results: [Dashboard](https://github.com/chaseboykin/SQL-and-Data-Visualization-Project/blob/main/F1%20Dashboard%20(Tableau).md)  
 
-## Datasets Used
+## Dataset Used
 I used 8 different tables from the dataset:
 * circuits
 * constructors
