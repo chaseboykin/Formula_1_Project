@@ -24,7 +24,7 @@ Result:
 
 2. Who are the most dominant teams of all time?
 
-```
+```sql
 SELECT constructors.name
 FROM constructors
 JOIN constructorstandings
@@ -46,7 +46,7 @@ Result:
 
 3. Who are the most dominant teams in the last 10 years?
 
-```
+```sql
 SELECT constructors.name
 FROM constructors
 JOIN constructorstandings
@@ -71,7 +71,7 @@ Result:
 
 4. Who has driven in Formula 1 since 2022?
 
-```
+```sql
 SELECT forename, surname, nationality, dob
 FROM drivers
 JOIN driverstandings
@@ -93,7 +93,8 @@ Result:
 
 5. Who are the best 10 drivers of all time?
 
-```SELECT forename, surname
+```sql
+SELECT forename, surname
 FROM driverstandings
 JOIN drivers
 ON driverstandings.driverid = drivers.driverid
@@ -114,7 +115,7 @@ Result:
 
 6. Who are the best 10 drivers in the last 10 years?
 
-```
+```sql
 SELECT forename, surname, nationality, dob
 FROM driverstandings
 JOIN drivers
@@ -140,7 +141,7 @@ Result:
 
 7. How many drivers born in or after 1998 have won a race?
 
-```
+```sql
 SELECT forename, surname
 FROM drivers
 JOIN driverstandings
@@ -158,7 +159,7 @@ Result:
 
 8. How often do drivers win the race when they qualify in 1st place?
 
-```
+```sql
 WITH 
 X1 AS (SELECT COUNT(ds.wins) AS wins FROM driverstandings AS ds
 JOIN qualifying AS q ON ds.driverid = q.driverid
