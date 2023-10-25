@@ -4,7 +4,7 @@
 
 1. Who are the 10 teams currently in Formula 1?
 
-```
+```sql
 SELECT constructors.name, constructors.nationality
 FROM constructors
 JOIN constructorstandings
